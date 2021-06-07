@@ -1,17 +1,22 @@
 package com.example.qrcode;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.iid.FirebaseInstanceIdReceiver;
 import com.kakao.sdk.auth.model.OAuthToken;
 import com.kakao.sdk.user.UserApiClient;
 import com.kakao.sdk.user.model.User;
@@ -138,16 +143,16 @@ public class MainActivity extends AppCompatActivity {
            }
        });
     }
-    private void updateKakaoLoginUi(){
+    private void updateKakaoLoginUi() {
         UserApiClient.getInstance().me(new Function2<User, Throwable, Unit>() {
             @Override
             public Unit invoke(User user, Throwable throwable) {
-                if (user != null){
-                    Log.i(TAG,"invoke: id=" + user.getId());
-                    Log.i(TAG,"invoke: email=" + user.getKakaoAccount().getEmail());
-                    Log.i(TAG,"invoke: nickname=" + user.getKakaoAccount().getProfile().getNickname());
-                    Log.i(TAG,"invoke: gender=" + user.getKakaoAccount().getGender());
-                    Log.i(TAG,"invoke: age=" + user.getKakaoAccount().getAgeRange());
+                if (user != null) {
+                    Log.i(TAG, "invoke: id=" + user.getId());
+                    Log.i(TAG, "invoke: email=" + user.getKakaoAccount().getEmail());
+                    Log.i(TAG, "invoke: nickname=" + user.getKakaoAccount().getProfile().getNickname());
+                    Log.i(TAG, "invoke: gender=" + user.getKakaoAccount().getGender());
+                    Log.i(TAG, "invoke: age=" + user.getKakaoAccount().getAgeRange());
 
 
                     nickname.setText(user.getKakaoAccount().getProfile().getNickname());
@@ -156,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
                     logoutButton.setVisibility(View.VISIBLE);
 
 
-                }else{
+                } else {
                     nickname.setText(null);
                     profileImage.setImageBitmap(null);
                     loginButton.setVisibility(View.VISIBLE);
@@ -164,8 +169,10 @@ public class MainActivity extends AppCompatActivity {
                 }
                 return null;
             }
+
         });
+
+
+        }
+
     }
-
-
-}

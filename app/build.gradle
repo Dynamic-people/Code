@@ -47,5 +47,5 @@ dependencies {
     implementation 'com.google.zxing:core:3.3.0'
     implementation 'com.google.firebase:firebase-database:20.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
-
+    implementation 'com.google.firebase:firebase-messaging:22.0.0'
 }

@@ -47,7 +47,7 @@ public class RandomMenuActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
 
-                    Intent intent1 = new Intent(getApplicationContext(), OrderActivity.class);
+                    Intent intent1 = new Intent(getApplicationContext(), StarbucksOrderActivity.class);
                     startActivity(intent1);
 
 
