@@ -30,7 +30,10 @@
         android:id="@+id/E_Button_send"
         android:text="SEND"
         android:layout_width="80dp"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:background="@drawable/solid_button"
+        android:textColor="@color/black"
+        app:backgroundTint="#E3CFB2"/>
     </LinearLayout>
 
 </LinearLayout>

@@ -42,7 +42,7 @@ public class RandomMenuActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
 
-                    Intent intent1 = new Intent(getApplicationContext(), StarbucksOrderActivity.class);
+                    Intent intent1 = new Intent(getApplicationContext(), StarbucksChoiceActivity.class);
                     startActivity(intent1);
 
 
@@ -54,7 +54,7 @@ public class RandomMenuActivity extends AppCompatActivity {
                 cardview.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent2 = new Intent(getApplicationContext(), EdiyaOrderActivity.class);
+                        Intent intent2 = new Intent(getApplicationContext(), EdiyaChoiceActivity.class);
                         startActivity(intent2);
                     }
 
@@ -64,7 +64,7 @@ public class RandomMenuActivity extends AppCompatActivity {
                 cardview.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent3 = new Intent(getApplicationContext(), TwosomeOrderActivity.class);
+                        Intent intent3 = new Intent(getApplicationContext(), TwosomeChoiceActivity.class);
                         startActivity(intent3);
 
                     }

@@ -10,7 +10,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="632dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -22,7 +22,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <Button
+                android:id="@+id/homebutton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Back to Home"
+                android:textColor="@color/black"
+                app:backgroundTint="#E3CFB2"
+                app:strokeColor="#FFFFFF" />
+
         </LinearLayout>
     </ScrollView>
 

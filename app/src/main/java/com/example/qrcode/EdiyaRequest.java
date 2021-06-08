@@ -1,5 +1,6 @@
 package com.example.qrcode;
 
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -42,6 +43,10 @@ public class EdiyaRequest extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ediya_request);
+
+        getSupportActionBar().setTitle("문의사항");
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFFCD853F));
+
         E_Button_send = findViewById(R.id.E_Button_send);
         EdiyaText_chat = findViewById(R.id.EdiyaText_chat);
 

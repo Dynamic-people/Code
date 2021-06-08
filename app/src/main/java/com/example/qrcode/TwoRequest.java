@@ -1,5 +1,6 @@
 package com.example.qrcode;
 
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -42,6 +43,10 @@ public class TwoRequest extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_two_request);
+
+        getSupportActionBar().setTitle("문의사항");
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(0xFFCD853F));
+
         T_Button_send = findViewById(R.id.T_Button_send);
         T_Text_chat = findViewById(R.id.T_Text_chat);
 
