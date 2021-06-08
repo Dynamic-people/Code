@@ -127,7 +127,8 @@ public class TwosomeOrderActivity extends AppCompatActivity {
 
                 });
 
-
+                Intent intent6 = new Intent(getApplicationContext(),ListActivity.class);
+                startActivity(intent6);
 
             }
         });

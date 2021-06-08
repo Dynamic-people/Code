@@ -19,6 +19,9 @@
         <activity android:name=".CafeListActivity"></activity>
         <activity android:name=".splashActivity"></activity>
         <activity android:name=".EdiyaChoiceActivity" />
+        <activity android:name=".StartbucksRequest" ></activity>
+        <activity android:name=".EdiyaRequest" ></activity>
+        <activity android:name=".TwoRequest" />
         <activity android:name=".TwosomeChoiceActivity" />
         <activity android:name=".TwosomeOrderActivity" />
         <activity android:name=".EdiyaOrderActivity" />

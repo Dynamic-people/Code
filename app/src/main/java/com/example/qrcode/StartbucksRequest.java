@@ -80,8 +80,6 @@ public class StartbucksRequest extends AppCompatActivity {
                         }
 
                     }  });
-
-
                 myRef.addChildEventListener(new ChildEventListener() {
                     @Override
                     public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
